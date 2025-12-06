@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- 웹 폰트 'Pretendard' 불러오기 -->
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+<style>
+    /* 기본 스타일 설정 (가독성 강화) */
+    body { margin: 0; padding: 0; }
+    .container { 
+        max-width: 860px; 
+        margin: 0 auto; 
+        font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif; 
+        color: #333; 
+        line-height: 1.75; 
+        letter-spacing: -0.02em; 
+    }
+    .section { padding: 80px 20px; }
+    .bg-beige { background-color: #F9F7F1; }
+    .bg-navy { background-color: #1A2B4B; color: white; }
+    .text-center { text-align: center; }
+    .accent { color: #378DBD; font-weight: 700; }
+    .alert { color: #D32F2F; font-weight: 700; }
+    
+    /* 형광펜 효과 */
+    .highlight { 
+        background: linear-gradient(to top, rgba(55, 141, 189, 0.2) 40%, transparent 40%); 
+        font-weight: 700;
+    }
+    
+    /* 타이포그래피 */
+    h1 { font-size: 42px; margin-bottom: 25px; font-weight: 900; line-height: 1.3; color: #111; }
+    h2 { font-size: 34px; margin-bottom: 35px; font-weight: 800; color: #222; }
+    h3 { font-size: 26px; margin-bottom: 20px; font-weight: 700; color: #333; }
+    p { font-size: 19px; margin-bottom: 18px; word-break: keep-all; color: #555; }
+    
+    /* 박스 디자인 */
+    .box { 
+        border: 2px solid #378DBD; 
+        padding: 35px; 
+        border-radius: 16px; 
+        background: #fff; 
+        margin: 35px 0; 
+        box-shadow: 0 4px 12px rgba(55, 141, 189, 0.1);
+    }
+    .box-title { font-size: 22px; font-weight: 800; color: #378DBD; margin-bottom: 15px; display: block; text-align: center; }
+    
+    /* 리뷰 카드 */
+    .review-card { 
+        background: #fff; 
+        padding: 25px; 
+        border-radius: 12px; 
+        margin-bottom: 15px; 
+        border-left: 6px solid #378DBD; 
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .review-card strong { display: block; font-size: 20px; margin-bottom: 10px; color: #1A2B4B; }
+
+    /* 체크 리스트 */
+    .check-list { margin-top: 20px; }
+    .check-list li { list-style: none; font-size: 19px; margin-bottom: 12px; padding-left: 30px; position: relative; color: #444; }
+    .check-list li::before { content: '✔'; color: #378DBD; position: absolute; left: 0; top: 2px; font-weight: 800; font-size: 20px; }
+    
+    /* 버튼 스타일 */
+    .btn-area { text-align: center; margin: 60px 0; }
+    .btn-apply { 
+        background-color: #D32F2F; 
+        color: white; 
+        padding: 22px 55px; 
+        font-size: 24px; 
+        font-weight: 800; 
+        text-decoration: none; 
+        border-radius: 60px; 
+        box-shadow: 0 8px 20px rgba(211, 47, 47, 0.3); 
+        display: inline-block; 
+        transition: all 0.3s ease; 
+    }
+    .btn-apply:hover { 
+        transform: translateY(-4px); 
+        box-shadow: 0 12px 25px rgba(211, 47, 47, 0.5); 
+        background-color: #c62828;
+    }
+
+    /* 이미지 스타일 */
+    .img-fluid { max-width: 100%; height: auto; border-radius: 12px; }
+    .profile-img { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 4px solid #eee; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+
+    /* 모바일 최적화 */
+    @media (max-width: 768px) {
+        h1 { font-size: 30px; }
+        h2 { font-size: 26px; }
+        h3 { font-size: 22px; }
+        p, .check-list li, .review-card strong { font-size: 17px; }
+        .section { padding: 50px 15px; }
+        .box { padding: 25px; }
+        .btn-apply { padding: 18px 40px; font-size: 20px; }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- 섹션 1: 후킹 & 문제 제기 -->
+    <div class="section text-center">
+        <p class="alert" style="font-size: 18px; display: inline-block; background: #fff0f0; padding: 5px 15px; border-radius: 20px;">※ 경고: 단순 가격 문의는 정중히 사양합니다.<br>(토탈케어 프로그램 비용 문의)</p>
+        <br><br>
+        <h1>일반고 내신 3~5등급,<br>애매한 내신성적이어서<br>인서울이 안될것같아 불안하시나요?</h1>
+        <p>학원, 과외 뺑뺑이 돌려도 성적은 제자리,<br>수행평가 챙기느라 밤새는 우리 아이...</p>
+        <br>
+        <div class="box" style="border-color: #D32F2F; background-color: #fff5f5;">
+            <p style="font-size: 24px; font-weight: 800; color: #D32F2F; margin-bottom: 10px;">"이대로 가면 인서울은 힘들겁니다!"</p>
+            <p style="font-size: 20px;">하지만 전략을 바꾸면 결과가 달라집니다.<br>성적이 아니라 <span class="highlight" style="background: linear-gradient(to top, rgba(211, 47, 47, 0.2) 40%, transparent 40%);">전략의 문제입니다.</span></p>
+        </div>
+    </div>
+
+    <!-- 섹션 2: 증거 제시 (GIF 적용 완료) -->
+    <div class="section bg-beige">
+        <h2 class="text-center">결과로 증명합니다.<br>기적 같은 합격 사례</h2>
+        
+        <div style="text-align: center; margin-bottom: 40px;">
+            <!-- 합격증 GIF 적용 -->
+            <img src="https://ecimg.cafe24img.com/pg2420b87909682043/skyconsulting24/web/product/extra/20251207/temp_shop1_17650362813131.gif" alt="합격증 증빙 자료" class="img-fluid" style="box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+            <p style="color: #777; font-size: 15px; margin-top: 15px; font-weight: 500;">▲ 실제 제 학생들의 합격증입니다. 거짓일 시 200% 환불해 드립니다.</p>
+        </div>
+
+        <div class="review-card">
+            <strong>🎓 내신 5등급 → 광운대 미디어학부 합격</strong>
+            <p>"선생님 아니었으면 인서울은 꿈도 못 꿨을 거예요. 생기부 하나로 뒤집었습니다."</p>
+        </div>
+        <div class="review-card">
+            <strong>🎓 내신 4등급 → 가톨릭대 장학생 합격</strong>
+            <p>"남들은 안 된다고 했는데, 슬기쌤 전략대로 하니까 되네요."</p>
+        </div>
+        <div class="review-card">
+            <strong>🎓 일반고 2.78등급 → 연세대 체교과 합격</strong>
+            <p>"성적 맞춰 대학 가려다가 인생이 바뀌었습니다."</p>
+        </div>
+    </div>
+
+    <!-- 섹션 3: 권위 & 스토리 (프로필 사진 적용 완료) -->
+    <div class="section">
+        <h2 class="text-center">이런 말을 하는 저,<br>믿을 만한 사람일까요?</h2>
+        <div style="display: flex; align-items: center; gap: 40px; flex-wrap: wrap; justify-content: center; margin-top: 40px;">
+            <!-- 선생님 프로필 사진 -->
+            <div style="flex-shrink: 0;">
+                <img src="https://ecimg.cafe24img.com/pg2420b87909682043/skyconsulting24/web/product/extra/20251207/temp_shop1_17650365738535.jpg" alt="입시해커 슬기쌤" class="profile-img">
+            </div>
+            <div style="flex: 1; min-width: 320px;">
+                <ul class="check-list">
+                    <li style="font-size: 21px;"><strong>연세대학교 물리학과 학사/석사 졸업</strong></li>
+                    <li>미국 Rutgers 주립대 박사 유학 확정 (가족을 위해 포기)</li>
+                    <li><strong>19년차</strong> 입시 수학 강사 & 컨설턴트</li>
+                    <li>구반포 / 압구정 입시 현장 경험 보유</li>
+                    <li>현재 <strong>생기부 토탈케어 프로그램 운영중</strong></li>
+                </ul>
+            </div>
+        </div>
+        <br><br>
+        <div class="box" style="background-color: #f9fcff;">
+            <p>저는 '교수'가 되려던 사람이었습니다. 하지만 가장의 무게를 짊어지고 도망치듯 학원가로 들어왔습니다. 그때 하나님께 기도했습니다.</p>
+            <p style="font-style: italic; color: #555; font-size: 20px; text-align: center; margin: 25px 0;">"12월까지 학생 20명이 안 모이면 깨끗이 접겠습니다."</p>
+            <p>그런데 시작하자마자 30명이 모였습니다. 그때 깨달았습니다.<br><span class="accent" style="font-size: 22px;">"아, 내 길은 아이들의 인생을 바꾸는 길라잡이 역할이구나."</span></p>
+            <p>그 사명감 하나로 19년간 전쟁터 같은 입시판에서 살아남았습니다.</p>
+        </div>
+    </div>
+
+    <!-- 섹션 4: 솔루션 (시간 확보 논리) -->
+    <div class="section bg-navy text-center">
+        <h2 style="color: white; margin-bottom: 10px;">왜 제 컨설팅을 받으면<br>성적이 오를까요?</h2>
+        <p style="color: #a4c7f5; font-size: 22px; font-weight: 700;">비결은 '순공부 시간' 확보입니다.</p>
+        <br>
+        <div style="background: white; color: #333; padding: 40px; border-radius: 20px; text-align: left; box-shadow: 0 15px 30px rgba(0,0,0,0.2);">
+            <h3 class="text-center" style="color: #D32F2F;">🛑 일반적인 학생들의 현실</h3>
+            <!-- 가운데 정렬 적용 -->
+            <div style="text-align: center; font-size: 20px; color: #555;">
+                <p>수행평가 주제 찾느라 3시간...<br>탐구보고서 쓰느라 밤샘...<br>세특 챙기느라 학원 숙제 못함...</p>
+            </div>
+            <p class="text-center" style="font-weight: 900; font-size: 30px; color: #D32F2F; margin: 20px 0;">⬇</p>
+            <p class="text-center alert" style="font-size: 24px;">내신 공부할 시간이 없다! (성적 하락)</p>
+            <hr style="margin: 30px 0; border-top: 2px dashed #ddd;">
+            <h3 class="text-center accent">✅ 슬기쌤 토탈케어 학생들</h3>
+            <!-- 가운데 정렬 적용 -->
+            <div style="text-align: center; font-size: 20px;">
+                <p>수행평가/탐구보고서? <strong>제가 기획하고 가이드 다 줍니다.</strong><br>세특 마무리? <strong>제가 100% 케어합니다.</strong></p>
+                <p style="margin-top: 25px;">학생은 그 시간에 뭘 할까요?<br><span class="highlight" style="font-size: 24px;">당당하게 수학 문제 100개를 더 풉니다.</span></p>
+            </div>
+        </div>
+        <br><br>
+        <p style="font-size: 26px; font-weight: 800; color: #fff; line-height: 1.4;">이것이 제가 만드는<br><span style="color: #FFD700;">[ 생기부 퀄리티 UP + 내신 성적 UP ]</span><br>필승 공식입니다.</p>
+    </div>
+
+    <!-- 섹션 5: 상품 소개 (진단 상담) -->
+    <div class="section">
+        <h2 class="text-center">1:1 생기부 진단 상담<br>(50,000원)</h2>
+        <p class="text-center" style="font-size: 20px;">본 컨설팅(토탈케어)에 들어가기 전,<br>학생의 상태를 냉정하게 진단하는 시간입니다.</p>
+        
+        <div class="box">
+            <span class="box-title">🔍 진단 상담에서 얻어가는 것</span>
+            <ul class="check-list">
+                <li>현재 학생부 상태에 대한 <strong>냉정한 팩트 폭격 & 진단</strong></li>
+                <li>목표 대학 합격 가능성 분석 (희망회로 X)</li>
+                <li>내신을 뒤집을 수 있는 <strong>'필승 키워드' & 로드맵 제시</strong></li>
+                <li>입학사정관이 5초 만에 뽑고 싶은 생기부 전략 공개</li>
+            </ul>
+        </div>
+
+        <div class="text-center" style="background-color: #f0f7ff; padding: 40px 20px; border-radius: 20px; margin-top: 40px;">
+            <h3 class="accent">🎁 특별 혜택 (진심은 우대합니다)</h3>
+            <p style="font-size: 20px;">진단 상담 후, <strong>'생기부 토탈케어(연간 관리)'</strong> 프로그램에 등록하시면</p>
+            <p class="alert" style="font-size: 30px; margin: 20px 0;">진단비 5만 원 전액을<br>그대로 환급(공제)해 드립니다.</p>
+            <p style="font-size: 20px;">결국, 저를 믿고 끝까지 함께할 분들에게<br><strong>진단 상담은 '무료'인 셈입니다.</strong></p>
+        </div>
+    </div>
+
+    <!-- 섹션 6: 필터링 & FAQ -->
+    <div class="section bg-beige">
+        <h2 class="text-center alert">죄송하지만,<br>아무나 받지 않습니다.</h2>
+        <p class="text-center" style="font-size: 20px;">저는 학원 매출 올리려고 학생을 구걸하지 않습니다.<br>이미 제 제자들만으로도 충분히 바쁩니다.</p>
+        <br>
+        <div style="background: #fff; padding: 40px; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+            <h3 style="color: #D32F2F;">❌ 이런 분은 신청하지 마세요</h3>
+            <ul class="check-list">
+                <li>떠먹여 줘도 씹을 의지가 없는 학생</li>
+                <li>"돈 냈으니 알아서 대학 보내주겠지" 생각하는 학부모님</li>
+                <li>최소한의 예의가 없는 분</li>
+            </ul>
+            <br>
+            <h3 class="accent">⭕ 저는 이런 학생을 원합니다</h3>
+            <ul class="check-list">
+                <li>전교 1등보다, <strong>'한 번 뒤집어보고 싶다'는 독기 품은 3~5등급</strong></li>
+                <li>시키는 건 무조건 해내겠다는 <strong>절실함이 있는 학생</strong></li>
+            </ul>
+        </div>
+        
+        <br><br>
+        <div class="text-center">
+            <div class="text-center" style="background: #e9ecef; padding: 30px; border-radius: 15px; display: inline-block;">
+                <p style="font-size: 20px; font-weight: 700; margin-bottom: 10px;">💡 더 궁금한 점이 있으신가요?</p>
+                <p>자주 묻는 질문 18가지를 네이버 카페에 정리해 두었습니다.</p>
+                <a href="https://cafe.naver.com/sky0n7/273" target="_blank" style="color: #378DBD; text-decoration: none; font-weight: 800; font-size: 20px; border-bottom: 2px solid #378DBD;">👉 자주 묻는 질문 보러가기 (클릭)</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 섹션 7: CTA -->
+    <div class="btn-area">
+        <p style="font-size: 22px; margin-bottom: 25px; color: #D32F2F; font-weight: 700;">지금 신청하지 않으면,<br>내일은 자리가 없을 수도 있습니다.<br><span style="font-weight: 500; color: #555; font-size: 18px;">(매월 선착순 5명 마감)</span></p>
+        <a href="#none" onclick="alert('상단의 구매하기 버튼을 눌러주세요!');" class="btn-apply">1:1 진단 상담 신청하기 (50,000원)</a>
+        <p style="margin-top: 20px; font-size: 16px; color: #777; font-weight: 500;">* 토탈케어 등록 시 100% 환급 혜택 적용</p>
+    </div>
+    
+    <div class="text-center" style="padding-bottom: 60px; color: #555;">
+        <p style="font-size: 20px;">여러분의 인생이 바뀔 수도 있습니다.<br>망설이는 시간에도 경쟁자의 생기부는 채워지고 있습니다.</p>
+        <h3 style="margin-top: 30px; color: #1A2B4B;">입시해커 슬기쌤 드림</h3>
+    </div>
+
+</div>
+
+</body>
+</html>
